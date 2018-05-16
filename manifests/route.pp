@@ -16,12 +16,17 @@ define netplan::route (
       mode    => '0644',
       notify  => Exec['netplan apply'],
     }
+
+    concat::fragment{ "/etc/netplan/${order}-routes-${dev}.yaml base":
+      target  => "/etc/netplan/${order}-routes-${dev}.yaml",
+      order   => '00',
+      content => template("${module_name}/routes/base.erb")
+    }
   }
 
-
-  concat::fragment{ "${apache::params::baseconf}/conf.d/sites/${order}-${servername}-${port}.conf.sorrypage custom healtcheck":
-    target  => "${apache::params::baseconf}/conf.d/sites/${order}-${servername}-${port}.conf.sorrypage",
-    order   => '04',
-    content => "\n  RewriteCond %{REQUEST_URI} !/${custom_sorrypage['healthcheck']}",
+  concat::fragment{ "/etc/netplan/${order}-routes-${dev}.yaml base":
+    target  => "/etc/netplan/${order}-routes-${dev}.yaml",
+    order   => '99',
+    content => template("${module_name}/routes/route.erb")
   }
 }
