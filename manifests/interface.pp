@@ -14,7 +14,14 @@ define netplan::interface (
                             $macaddress       = undef,
                             $order            = '91',
                           ) {
-  include ::netplan
+  if versioncmp($::puppetversion, '4.0.0') >= 0
+  {
+    contain ::netplan
+  }
+  else
+  {
+    include ::netplan
+  }
 
   file { "/etc/netplan/${order}-${dev}.yaml":
     ensure  => 'present',
@@ -22,6 +29,7 @@ define netplan::interface (
     group   => 'root',
     mode    => '0644',
     content => template("${module_name}/interface.erb"),
+    notify  => Exec['netplan apply'],
   }
 
 }

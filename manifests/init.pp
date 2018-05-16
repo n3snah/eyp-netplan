@@ -11,4 +11,9 @@ class netplan(
   -> class { '::netplan::config': }
   -> Class['::netplan']
 
+  exec { 'netplan apply':
+    command     => '/usr/sbin/netplan apply',
+    refreshonly => true,
+  }
+
 }
