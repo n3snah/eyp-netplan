@@ -21,7 +21,7 @@ define netplan::interface (
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => template("${module_name}/inferface.erb"),
+    content => template("${module_name}/interface.erb"),
   }
 
 }
