@@ -14,14 +14,7 @@ define netplan::interface (
                             $macaddress       = undef,
                             $order            = '91',
                           ) {
-  if versioncmp($::puppetversion, '4.0.0') >= 0
-  {
-    contain ::netplan
-  }
-  else
-  {
-    include ::netplan
-  }
+  include ::netplan
 
   file { "/etc/netplan/${order}-${dev}.yaml":
     ensure  => 'present',
