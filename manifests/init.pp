@@ -7,9 +7,7 @@ class netplan(
                 $service_enable        = true,
               ) inherits netplan::params{
 
-  # class { '::netplan::install': }
-  # -> class { '::netplan::config': }
-  # ~> class { '::netplan::service': }
-  # -> Class['::netplan']
+  class { '::netplan::install': }
+  -> Class['::netplan']
 
 }
