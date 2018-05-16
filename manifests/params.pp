@@ -1,6 +1,6 @@
 class netplan::params {
 
-  $package_name='netplan'
+  $package_name='netplan.io'
   $service_name='netplan'
 
   case $::osfamily
