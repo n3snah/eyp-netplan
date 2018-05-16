@@ -16,7 +16,7 @@ define netplan::interface (
                           ) {
   include ::netplan
 
-  file { "/etc/netplan/${91}-${dev}.yaml":
+  file { "/etc/netplan/${order}-${dev}.yaml":
     ensure  => 'present',
     owner   => 'root',
     group   => 'root',
