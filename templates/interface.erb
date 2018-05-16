@@ -1,0 +1,35 @@
+---
+network:
+  version: 2
+  ethernets:
+    <%= @item %>:
+      <%- if @match -%>
+      match:
+        <%- if defined?(@match_name) -%>
+        name: <%= @match_name %>
+        <%- end -%>
+        <%- if defined?(@match_macaddress) -%>
+        macaddress: <%= @match_macaddress %>
+        <%- end -%>
+        <%- if defined?(@match_driver) -%>
+        driver: <%= @match_driver %>
+        <%- end -%>
+      <%- end -%>
+      dhcp4: <%= @dhcp4 %>
+      dhcp6: <%= @dhcp6 %>
+      <%- if defined?(@gateway4) -%>
+      gateway4: <%= @gateway4 %>
+      <%- end -%>
+      <%- if defined?(@gateway6) -%>
+      gateway6: <%= @gateway6 %>
+      <%- end -%>
+      <%- if @addresses.any? -%>
+      addresses: [<%= @addresses.join(',') %>]
+      <%- end -%>
+      <%- if @dns.any? -%>
+      nameservers:
+        addresses: [<%= @dns.join(',') %>]
+      <%- end -%>
+      <%- if defined?(@macaddress) -%>
+      macaddress: <%= @macaddress %>
+      <%- end -%>
