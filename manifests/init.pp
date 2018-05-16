@@ -8,6 +8,7 @@ class netplan(
               ) inherits netplan::params{
 
   class { '::netplan::install': }
+  -> class { '::netplan::config': }
   -> Class['::netplan']
 
 }
