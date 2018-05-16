@@ -1,4 +1,4 @@
-define network::interface (
+define netplan::interface (
                             $dev              = $name,
                             $match            = false,
                             $match_name       = undef,
