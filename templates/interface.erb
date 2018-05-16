@@ -15,8 +15,15 @@ network:
         driver: <%= @match_driver %>
         <%- end -%>
       <%- end -%>
+      <%- if defined?(@optional) -%>
+      optional: <%= @optional %>
+      <%- end -%>
+      <%- if defined?(@dhcp4) -%>
       dhcp4: <%= @dhcp4 %>
+      <%- end -%>
+      <%- if defined?(@dhcp6) -%>
       dhcp6: <%= @dhcp6 %>
+      <%- end -%>
       <%- if defined?(@gateway4) -%>
       gateway4: <%= @gateway4 %>
       <%- end -%>

@@ -8,9 +8,9 @@ define netplan::interface (
                             $gateway4         = undef,
                             $gateway6         = undef,
                             $dns              = [],
-                            $dhcp4            = false,
-                            $dhcp6            = false,
-                            $optional         = false,
+                            $dhcp4            = undef,
+                            $dhcp6            = undef,
+                            $optional         = undef,
                             $macaddress       = undef,
                             $order            = '91',
                           ) {
