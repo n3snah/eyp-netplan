@@ -24,7 +24,7 @@ define netplan::route (
     }
   }
 
-  concat::fragment{ "/etc/netplan/${order}-routes-${dev}.yaml base":
+  concat::fragment{ "/etc/netplan/${order}-routes-${dev}.yaml ${dev} ${gw} ${network}":
     target  => "/etc/netplan/${order}-routes-${dev}.yaml",
     order   => '99',
     content => template("${module_name}/routes/route.erb")
