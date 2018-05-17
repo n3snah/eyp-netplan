@@ -37,6 +37,9 @@ network:
       <%- if @dns.any? -%>
       nameservers:
         addresses: [<%= @dns.join(',') %>]
+        <%- if @search.any? -%>
+        search: [<%= @search.join(',') %>]
+        <%- end -%>
       <%- end -%>
       <%- if defined?(@macaddress) -%>
       macaddress: <%= @macaddress %>

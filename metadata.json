@@ -1,6 +1,6 @@
 {
   "name": "eyp-netplan",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "eyp",
   "summary": "network management using netplan.io",
   "license": "Apache-2.0",
