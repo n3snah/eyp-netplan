@@ -5,6 +5,7 @@ class netplan(
                 $manage_docker_service = true,
                 $service_ensure        = 'running',
                 $service_enable        = true,
+                $netplan_dir_purge     = false,
               ) inherits netplan::params{
 
   class { '::netplan::install': }
