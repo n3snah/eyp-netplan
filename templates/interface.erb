@@ -3,11 +3,11 @@
 network:
   version: 2
   ethernets:
-    <%= @dev %>:
+    '<%= @dev %>':
       <%- if @match -%>
       match:
         <%- if defined?(@match_name) -%>
-        name: <%= @match_name %>
+        name: '<%= @match_name %>'
         <%- end -%>
         <%- if defined?(@match_macaddress) -%>
         macaddress: <%= @match_macaddress %>
@@ -37,6 +37,9 @@ network:
       <%- if @dns.any? -%>
       nameservers:
         addresses: [<%= @dns.join(',') %>]
+        <%- if @search.any? -%>
+        search: [<%= @search.join(',') %>]
+        <%- end -%>
       <%- end -%>
       <%- if defined?(@macaddress) -%>
       macaddress: <%= @macaddress %>

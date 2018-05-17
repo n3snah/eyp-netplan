@@ -8,6 +8,9 @@ class netplan(
                 $netplan_dir_purge     = false,
               ) inherits netplan::params{
 
+  include ::systemd::resolved
+
+  Class['::systemd::resolved'] ->
   class { '::netplan::install': }
   -> class { '::netplan::config': }
   -> Class['::netplan']

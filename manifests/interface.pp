@@ -1,5 +1,6 @@
 define netplan::interface (
                             $dev              = $name,
+                            $filename         = $name,
                             $match            = false,
                             $match_name       = undef,
                             $match_macaddress = undef,
@@ -8,6 +9,7 @@ define netplan::interface (
                             $gateway4         = undef,
                             $gateway6         = undef,
                             $dns              = [],
+                            $search           = [],
                             $dhcp4            = undef,
                             $dhcp6            = undef,
                             $optional         = undef,
@@ -16,7 +18,7 @@ define netplan::interface (
                           ) {
   include ::netplan
 
-  file { "/etc/netplan/${order}-${dev}.yaml":
+  file { "/etc/netplan/${order}-${filename}.yaml":
     ensure  => 'present',
     owner   => 'root',
     group   => 'root',
