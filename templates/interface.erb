@@ -3,11 +3,11 @@
 network:
   version: 2
   ethernets:
-    <%= @dev %>:
+    '<%= @dev %>':
       <%- if @match -%>
       match:
         <%- if defined?(@match_name) -%>
-        name: <%= @match_name %>
+        name: '<%= @match_name %>'
         <%- end -%>
         <%- if defined?(@match_macaddress) -%>
         macaddress: <%= @match_macaddress %>
