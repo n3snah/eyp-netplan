@@ -9,6 +9,7 @@ define netplan::interface (
                             $gateway4         = undef,
                             $gateway6         = undef,
                             $dns              = [],
+                            $search           = [],
                             $dhcp4            = undef,
                             $dhcp6            = undef,
                             $optional         = undef,

@@ -2,7 +2,9 @@
 
 ## 0.1.1
 
-* filename option for **netplan::interface**
+* **netplan::interface**:
+  - filename option
+  - added **search** option to configure search domains
 
 ## 0.1.0
 
