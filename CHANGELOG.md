@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.2
+
+* bugfix yaml syntax
+
 ## 0.1.1
 
 * **netplan::interface**:
