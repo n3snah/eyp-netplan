@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.4
+
+* updated concat dependencies
+
 ## 0.1.3
 
 * bugfix: search option implementation
