@@ -10,11 +10,11 @@ define netplan::route (
   if(!defined(Concat["/etc/netplan/${order}-routes-${dev}.yaml"]))
   {
     concat { "/etc/netplan/${order}-routes-${dev}.yaml":
-      ensure  => 'present',
-      owner   => 'root',
-      group   => 'root',
-      mode    => '0644',
-      notify  => Exec['netplan apply'],
+      ensure => 'present',
+      owner  => 'root',
+      group  => 'root',
+      mode   => '0644',
+      notify => Exec['netplan apply'],
     }
 
     concat::fragment{ "/etc/netplan/${order}-routes-${dev}.yaml base":
