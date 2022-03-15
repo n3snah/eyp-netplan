@@ -13,7 +13,7 @@ class netplan::params {
         {
           case $::operatingsystemrelease
           {
-            /^18.*$/:
+            /^18.*$|20.*$/:
             {
             }
             default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
