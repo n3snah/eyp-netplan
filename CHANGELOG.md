@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.6
+
+* Added Ubuntu 20 support
+
 ## 0.1.5
 
 * Updated metadata for **eyp-systemd 0.2.0**
