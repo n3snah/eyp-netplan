@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Unreleased
+* Added in support for specifying only DNS Search suffixes without specifying DNS servers.
+
 ## 0.1.6
 
 * Added Ubuntu 20 support
