@@ -24,5 +24,10 @@
       "name": "puppet",
       "version_requirement": ">= 3.8.0"
     }
+  ],
+  "tags": [
+    "netplan",
+    "network",
+    "networking"
   ]
 }
