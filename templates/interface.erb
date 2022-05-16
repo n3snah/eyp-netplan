@@ -34,9 +34,11 @@ network:
       <%- if @addresses.any? -%>
       addresses: [<%= @addresses.join(',') %>]
       <%- end -%>
-      <%- if @dns.any? -%>
+      <%- if @dns.any? || @search.any? -%>
       nameservers:
+        <%- if @dns.any? -%>
         addresses: [<%= @dns.join(',') %>]
+        <%- end -%>
         <%- if @search.any? -%>
         search: [<%= @search.join(',') %>]
         <%- end -%>
