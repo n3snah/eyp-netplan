@@ -29,7 +29,7 @@ describe 'netplan::install' do
             super().merge(
               {
                 'package_ensure' => 'installed'
-              }
+              },
             )
           end
 
@@ -43,7 +43,7 @@ describe 'netplan::install' do
             super().merge(
               {
                 'package_ensure' => 'absent'
-              }
+              },
             )
           end
 
@@ -65,7 +65,7 @@ describe 'netplan::install' do
         end
 
         it do
-          is_expected.to have_resource_count(0) 
+          is_expected.to have_resource_count(0)
         end
       end
     end

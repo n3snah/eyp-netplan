@@ -18,6 +18,8 @@ AllCops:
   - "**/Puppetfile"
   - "**/Vagrantfile"
   - "**/Guardfile"
+  - "spec/spec_helper_acceptance.rb"
+  - "spec/acceptance/**/*"
 Layout/LineLength:
   Description: People have wide screens, use them.
   Max: 200

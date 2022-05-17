@@ -28,13 +28,13 @@
 # @example
 #   include netplan
 class netplan (
-                $manage_package        = true,
-                $package_ensure        = 'installed',
-                $manage_service        = true,
-                $manage_docker_service = true,
-                $service_ensure        = 'running',
-                $service_enable        = true,
-                $netplan_dir_purge     = false,
+                Boolean $manage_package        = true,
+                String $package_ensure         = 'installed',
+                Boolean $manage_service        = true,
+                Boolean $manage_docker_service = true,
+                String $service_ensure         = 'running',
+                Boolean $service_enable        = true,
+                Boolean $netplan_dir_purge     = false,
               ) inherits netplan::params{
 
   include ::systemd::resolved
@@ -43,7 +43,7 @@ class netplan (
   -> class { '::netplan::install':
     manage_package => $manage_package,
     package_ensure => $package_ensure
-   }
+  }
   -> class { '::netplan::config':
   dir_purge => $netplan_dir_purge }
   -> Class['::netplan']
