@@ -2,6 +2,11 @@
 
 ## Unreleased
 * Added in support for specifying only DNS Search suffixes without specifying DNS servers.
+* Improved module metadata by adding tags network, networking, netplan
+* Added PDK 2.4.0 support
+* Improved `.fixtures.yaml` to use HTTPS instead of git protocol and added extra dependencies
+* Adding Unit testing and class documentation for `netplan::config`
+* Adding Unit testing and class documentation for `netplan::install`
 
 ## 0.1.6
 
