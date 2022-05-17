@@ -8,15 +8,30 @@
   "project_page": "https://github.com/NTTCom-MS/eyp-netplan",
   "issues_url": "https://github.com/NTTCom-MS/eyp-netplan/issues",
   "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0 < 9.9.9"},
-    {"name":"puppetlabs/concat","version_requirement":">= 1.2.3 < 9.9.9"},
-    {"name":"eyp/systemd","version_requirement":">= 0.1.43 < 0.4.0"},
-    {"name":"eyp/eyplib","version_requirement":">= 0.1.0 < 0.2.0"}
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 1.0.0 < 9.9.9"
+    },
+    {
+      "name": "puppetlabs/concat",
+      "version_requirement": ">= 1.2.3 < 9.9.9"
+    },
+    {
+      "name": "eyp/systemd",
+      "version_requirement": ">= 0.1.43 < 0.4.0"
+    },
+    {
+      "name": "eyp/eyplib",
+      "version_requirement": ">= 0.1.0 < 0.2.0"
+    }
   ],
   "operatingsystem_support": [
     {
       "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [ "18.04", "20.04" ]
+      "operatingsystemrelease": [
+        "18.04",
+        "20.04"
+      ]
     }
   ],
   "requirements": [
@@ -29,5 +44,8 @@
     "netplan",
     "network",
     "networking"
-  ]
+  ],
+  "pdk-version": "2.4.0",
+  "template-url": "pdk-default#2.4.0",
+  "template-ref": "tags/2.4.0-0-gfa6b6d2"
 }
