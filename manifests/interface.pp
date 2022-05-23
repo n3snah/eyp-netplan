@@ -1,3 +1,37 @@
+# @summary Create interface configurations for Netplan
+#
+# This defined type allows Puppet to create multiple interface configuration files.
+#
+# @param dev
+# @param filename
+#   The name of the interface file
+# @param match
+# @param match_name
+#   Match on interface name
+# @param match_macaddress
+#   Match a devices MAC address. Globs are not allowed
+# @param match_driver
+#   Match a kernel driver name. Matching on driver is only supported with NetworkD.
+# @param addresses
+# @param gateway4
+#   Set the default gateway for IPv4
+# @param gateway6
+#   Set the default gateway for IPv6
+# @param dns
+#   A list of DNS server IP addresses
+# @param search
+#   A list of DNS search suffixes
+# @param dhcp4
+#   Should the interface use DHCP v4 to obtain an IP address
+# @param dhcp6
+#   Should the interface use DHCP v6 to obtain an IP address
+# @param optional
+#   Should the interface be flagged as optional. Does the system require the interface to boot?
+# @param macaddress
+#   Sets the device MAC address.
+# @param order
+#   The order in which the interface files are loaded
+#
 define netplan::interface (
                             $dev              = $name,
                             $filename         = $name,

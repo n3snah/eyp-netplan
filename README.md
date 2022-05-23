@@ -66,7 +66,7 @@ TODO
 
 ## Limitations
 
-Tested on Ubuntu 18.04
+Tested on Ubuntu 18.04 & Ubuntu 20.04
 
 ## Development
 
