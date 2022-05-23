@@ -24,5 +24,20 @@ describe 'netplan' do
         )
       end
     end
+
+    context 'unsupported operating system' do
+      describe 'netplan class without any parameters' do
+        let(:facts) do
+          {
+            :osfamily        => 'SOFriki',
+            :operatingsystem => 'SOFregit',
+          }
+        end
+  
+        it {
+          expect { should raise_error(Puppet::Error) }
+        }
+      end
+    end
   end
 end

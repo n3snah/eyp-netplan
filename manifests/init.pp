@@ -13,12 +13,16 @@
 #   absent - Will ensure that Netplan is absent
 #
 # @param manage_service
+#   TODO: This param doesn't do anything yet
 #
 # @param manage_docker_service
+#   TODO: This param doesn't do anything yet
 #
 # @param service_ensure
+#   TODO: This param doesn't do anything yet
 #
 # @param service_eneable
+#   TODO: This param doesn't do anything yet
 #
 # @param netplan_dir_purge
 #   Configures puppet to manage all contents inside the /etc/netplan directory.

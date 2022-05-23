@@ -5,10 +5,11 @@
 * Improved module metadata by adding tags network, networking, netplan
 * Added PDK 2.4.0 support
 * Improved `.fixtures.yaml` to use HTTPS instead of git protocol and added extra dependencies
-* Adding Unit testing and class documentation for `netplan::config`
-* Adding Unit testing and class documentation for `netplan::install`
+* Added Unit testing and class documentation for `netplan::config`
+* Added Unit testing and class documentation for `netplan::install`
+* Added Unit testing and class documentation for defined type `netplan::interface`
+* Added Unit testing and class documentation for `netplan`
 * Forcing class params to be of specific types
-* Adding Unit testing and class documentation for defined type `netplan::interface`
 * Updating README.md to reflect support on Ubuntu 20.04
 
 ## 0.1.6
