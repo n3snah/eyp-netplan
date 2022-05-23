@@ -74,6 +74,9 @@ We are pushing to have acceptance testing in place, so any new feature should
 have some test to check both presence and absence of any feature
 
 ### TODO
+1. Add support for Ubuntu 22.04
+2. Convert erb templates to epp templates
+3. Add ability to manage renderer
 
 ### Contributing
 
