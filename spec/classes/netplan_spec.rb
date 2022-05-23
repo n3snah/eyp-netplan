@@ -18,7 +18,7 @@ describe 'netplan' do
 
       it do
         is_expected.to contain_class('netplan::config').with(
-          'dir_purge' => false
+          'dir_purge' => false,
         )
       end
 
@@ -48,10 +48,10 @@ describe 'netplan' do
             super().merge(
               {
                 'package_ensure' => 'installed'
-              }
+              },
             )
           end
-  
+
           it do
             is_expected.to contain_class('netplan::install').with(
               'manage_package' => true,
@@ -65,10 +65,10 @@ describe 'netplan' do
             super().merge(
               {
                 'package_ensure' => 'absent'
-              }
+              },
             )
           end
-  
+
           it do
             is_expected.to contain_class('netplan::install').with(
               'manage_package' => true,
@@ -97,7 +97,7 @@ describe 'netplan' do
             super().merge(
               {
                 'package_ensure' => 'installed'
-              }
+              },
             )
           end
 
@@ -114,7 +114,7 @@ describe 'netplan' do
             super().merge(
               {
                 'package_ensure' => 'absent'
-              }
+              },
             )
           end
 
@@ -136,7 +136,7 @@ describe 'netplan' do
 
         it do
           is_expected.to contain_class('netplan::config').with(
-            'dir_purge' => true
+            'dir_purge' => true,
           )
         end
       end
@@ -150,7 +150,7 @@ describe 'netplan' do
 
         it do
           is_expected.to contain_class('netplan::config').with(
-            'dir_purge' => false
+            'dir_purge' => false,
           )
         end
       end
@@ -160,13 +160,13 @@ describe 'netplan' do
       describe 'netplan class without any parameters' do
         let(:facts) do
           {
-            :osfamily        => 'SOFriki',
-            :operatingsystem => 'SOFregit',
+            osfamily: 'SOFriki',
+            operatingsystem: 'SOFregit',
           }
         end
-  
+
         it {
-          expect { should raise_error(Puppet::Error) }
+          expect { is_expected.to raise_error(Puppet::Error) }
         }
       end
     end
